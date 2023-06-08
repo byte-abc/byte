@@ -1,0 +1,40 @@
+{
+  "name": "byte",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byte-abc/byte.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byte-abc/byte/issues"
+  },
+  "homepage": "https://github.com/byte-abc/byte#readme",
+  "devDependencies": {
+    "vitest": "^0.31.4",
+    "histoire": "^0.16.1",
+    "@histoire/plugin-vue": "^0.16.1",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "@vue/eslint-config-typescript": "^11.0.3",
+    "eslint": "8.28.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-functional": "^5.0.8",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsonc": "^2.7.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-sort-export-all": "^1.2.2",
+    "eslint-plugin-sort-keys-fix": "1.1.2",
+    "eslint-plugin-typescript-sort-keys": "2.1.0",
+    "eslint-plugin-unicorn": "45.0.0",
+    "eslint-plugin-vue": "^9.11.0"
+  }
+}
