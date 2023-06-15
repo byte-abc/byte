@@ -5,10 +5,12 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "prepare": "nuxt prepare"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@chakra-ui/nuxt-next": "^2.1.0-beta.12",
     "@types/node": "^18",
     "nuxt": "^3.5.2"
   }
