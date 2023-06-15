@@ -6,7 +6,5 @@
     "vue-router": "^4.2.2"
   },
   "devDependencies": {
-    "vite": "^4.3.9",
-    "@vitejs/plugin-vue": "^4.2.3"
   }
 }
