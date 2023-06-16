@@ -12,6 +12,4 @@ export default {
       },
     },
   },
-
-  modules: ['@chakra-ui/nuxt-next'],
 }
