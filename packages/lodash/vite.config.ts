@@ -2,7 +2,6 @@ import {fileURLToPath, URL} from 'node:url'
 import {defineConfig} from 'vite'
 import packageJson from './package.json'
 import vue from '@vitejs/plugin-vue'
-import dts from 'vite-plugin-dts'
 import {camelCase} from 'lodash'
 
 const {dependencies = {}, name} = packageJson ?? {}
@@ -29,19 +28,8 @@ const config = defineConfig(() => {
       exclude: ['vue-demi', 'vue'],
     },
     plugins: [
+      //
       vue(),
-      dts({
-        compilerOptions: {
-          checkJs: false,
-          declaration: true,
-          declarationMap: false,
-          emitDeclarationOnly: true,
-          noEmit: false,
-          noEmitOnError: true,
-          preserveSymlinks: false,
-          skipLibCheck: true,
-        },
-      }) as any,
     ],
     resolve: {
       alias: {
