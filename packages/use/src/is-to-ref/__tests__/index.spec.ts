@@ -11,15 +11,15 @@ describe('isToRef', () => {
     return {result, scope}
   }
   it('should return false with ref', () => {
-    const {result, scope} = setup(ref('bar'))
+    const {result} = setup(ref('bar'))
     expect(result).toBe(false)
   })
   it('should return true with toRef', () => {
-    const {result, scope} = setup(toRef(reactive({foo: ref('foo')}), 'foo'))
+    const {result} = setup(toRef(reactive({foo: ref('foo')}), 'foo'))
     expect(result).toBe(true)
   })
   it('should return false with computed', () => {
-    const {result, scope} = setup(computed(() => 'john'))
+    const {result} = setup(computed(() => 'john'))
     expect(result).toBe(false)
   })
 })
