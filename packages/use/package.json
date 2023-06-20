@@ -1,0 +1,20 @@
+{
+  "name": "@byte-abc/use",
+  "version": "1.0.0",
+  "dependencies": {
+    "vue": "3.3.4"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production vite build",
+    "dev": "cross-env NODE_ENV=dev vite build --watch",
+    "prepare": "cross-env NODE_ENV=dev vite build",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "vite": "^4.3.9",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "lodash": "^4.17.21",
+    "vite-plugin-dts": "^2.3.0",
+    "@vue/test-utils": "^2.3.2"
+  }
+}

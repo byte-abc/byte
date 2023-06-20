@@ -6,11 +6,19 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "prepare": "nuxt prepare"
+  },
+  "dependencies": {
+    "@vueuse/core": "^9.13.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.7.2",
     "@types/node": "^18",
-    "nuxt": "^3.5.2"
-  }
+    "nuxt": "^3.5.2",
+    "vite": "^4.3.9"
+  },
+  "web-types": [
+    "./web-types.json"
+  ]
 }

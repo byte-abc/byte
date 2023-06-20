@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
+  "name": "web-level",
+  "version": "0.0.1",
+  "contributions": {
+    "html": {
+      "vue-components": [
+        {
+          "name": "nuxt-page"
+        }
+      ]
+    }
+  }
+}

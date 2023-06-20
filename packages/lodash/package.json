@@ -1,0 +1,20 @@
+{
+  "name": "@byte-abc/lodash",
+  "version": "1.0.0",
+  "dependencies": {
+    "vue": "3.3.4"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production vite build && pnpm run copytype",
+    "copytype": "cpy \"node_modules/@types/lodash/**/*.ts\" dist ",
+    "dev": "cross-env NODE_ENV=dev vite build --watch",
+    "prepare": "cross-env NODE_ENV=dev vite build && pnpm run copytype"
+  },
+  "devDependencies": {
+    "cpy-cli": "^4.2.0",
+    "vite": "^4.3.9",
+    "@types/lodash": "^4.14.195",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "lodash": "^4.17.21"
+  }
+}
