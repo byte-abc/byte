@@ -1,32 +1,25 @@
-/**
- * @jest-environment jsdom
- */
+import {describe, expect, it} from 'vitest'
+import {computed, effectScope, reactive, ref, toRef} from 'vue'
 import {isToRef} from '../'
-import {computed, ref, toRef} from 'vue'
-// import {mountComposition} from '@winter-love/vue-test'
 
-// describe('isToRef', () => {
-//   it('should be ref', () => {
-//     const wrapper = mountComposition(
-//       (props) => {
-//         const fooProp = toRef(props, 'foo')
-//         const bar = ref('bar')
-//         const john = computed(() => 'john')
-//         return {
-//           isBar: isToRef(bar),
-//           isFoo: isToRef(fooProp),
-//           isJohn: isToRef(john),
-//         }
-//       },
-//       {
-//         props: {
-//           foo: {default: '', type: String},
-//         },
-//       },
-//     )
-//
-//     expect(wrapper.setupState.isFoo).toEqual(true)
-//     expect(wrapper.setupState.isBar).toEqual(false)
-//     expect(wrapper.setupState.isJohn).toEqual(false)
-//   })
-// })
+describe('isToRef', () => {
+  const setup = (ref: any) => {
+    const scope = effectScope()
+    const result = scope.run(() => {
+      return isToRef(ref)
+    })
+    return {result, scope}
+  }
+  it('should return false with ref', () => {
+    const {result, scope} = setup(ref('bar'))
+    expect(result).toBe(false)
+  })
+  it('should return true with toRef', () => {
+    const {result, scope} = setup(toRef(reactive({foo: ref('foo')}), 'foo'))
+    expect(result).toBe(true)
+  })
+  it('should return false with computed', () => {
+    const {result, scope} = setup(computed(() => 'john'))
+    expect(result).toBe(false)
+  })
+})
