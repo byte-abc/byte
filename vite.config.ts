@@ -1,9 +1,8 @@
 /// <reference types="vitest" />
 /// <reference types="histoire" />
 
-import {defineConfig, normalizePath} from 'vite'
 import vue from '@vitejs/plugin-vue'
-import {readConfigFile} from 'typescript'
+import {defineConfig} from 'vite'
 
 // eslint-disable-next-line prefer-regex-literals
 const packages = ['/Users/gimbichi/Documents/Apps/byte/apps/nuxt/']
@@ -31,7 +30,7 @@ export default defineConfig({
           }
 
           // todo
-          console.log('source', source, 'importer', importer)
+          // console.log('source', source, 'importer', importer)
           // return `${importer}/${source}`
           return null
         },
