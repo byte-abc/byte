@@ -22,7 +22,7 @@ const config = defineConfig(() => {
       },
       minify: isProduction,
       rollupOptions: {
-        external: [...depsKey, 'node:path'],
+        external: [...depsKey, 'node:path', 'node:fs'],
       },
     },
     optimizeDeps: {

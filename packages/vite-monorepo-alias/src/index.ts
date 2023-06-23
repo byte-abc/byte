@@ -1,1 +1,2 @@
-export * from './vite-alias'
+export * from './alias'
+export * from './workspace-info'
