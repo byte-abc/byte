@@ -15,7 +15,7 @@ describe('get-typescript-alias', () => {
     return {}
   }
   it('should get typescript alias', async () => {
-    const prepare = setup()
+    setup()
     const alias = await getTypescriptAlias([
       join(__dirname, 'packages/*'),
       join(__dirname, 'apps/*'),

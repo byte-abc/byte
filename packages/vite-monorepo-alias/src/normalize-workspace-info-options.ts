@@ -1,4 +1,3 @@
-import {parseWorkspacePath} from './parse-workspace-path'
 import {join} from 'node:path'
 
 export interface CreateWorkspaceInfoOptions {
