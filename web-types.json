@@ -1,0 +1,114 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
+  "name": "project-level",
+  "version": "0.0.1",
+  "contributions": {
+    "html": {
+      "vue-components": [
+        {
+          "name": "variant",
+          "props": [
+            {
+              "name": "title",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "init-state",
+              "value": {
+                "type": "string"
+              }
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "controls"
+            }
+          ]
+        },
+        {
+          "name": "story",
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "controls"
+            }
+          ]
+        },
+        {
+          "name": "code-group"
+        },
+        {
+          "name": "hst-number"
+        },
+        {
+          "name": "hst-radio",
+          "props": [
+            {
+              "name": "options",
+              "value": {
+                "type": "array"
+              }
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "controls"
+            }
+          ]
+        },
+        {
+          "name": "hst-slider",
+          "props": [
+            {
+              "name": "min",
+              "value": {
+                "type": "number"
+              }
+            },
+            {
+              "name": "max",
+              "value": {
+                "type": "number"
+              }
+            }
+          ]
+        },
+        {
+          "name": "hst-checkbox"
+        },
+        {
+          "name": "hst-text"
+        },
+        {
+          "name": "hst-select",
+          "props": [
+            {
+              "name": "title",
+              "value": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "options",
+              "value": {
+                "type": "array"
+              }
+            }
+          ]
+        }
+      ],
+      "attributes": [
+      ]
+    }
+  }
+}

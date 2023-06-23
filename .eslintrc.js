@@ -672,7 +672,7 @@ module.exports = {
     'vue/no-undef-components': [
       'warn',
       {
-        // ignorePatterns: ['i-wavve(\\-\\w+)+'],
+        ignorePatterns: ['q(\\-\\w+)+', 'nuxt(\\-\\w+)+'],
       },
     ],
     'vue/no-undef-properties': 'off',

@@ -9,9 +9,11 @@
     "prepare": "nuxt prepare"
   },
   "dependencies": {
-    "@vueuse/core": "^9.13.0"
+    "@vueuse/core": "^9.13.0",
+    "@quasar/extras": "^1.16.4"
   },
   "devDependencies": {
+    "nuxt-quasar-ui": "^2.0.2",
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.7.2",
     "@types/node": "^18",
@@ -19,6 +21,7 @@
     "vite": "^4.3.9"
   },
   "web-types": [
+    "../../node_modules/quasar/dist/web-types/web-types.json",
     "./web-types.json"
   ]
 }

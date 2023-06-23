@@ -1,5 +1,8 @@
 <template>
-  <div>index page</div>
+  <q-page>
+    index page
+    <q-btn color="primary" label="Primary" />
+  </q-page>
 </template>
 
 <script setup lang="ts">

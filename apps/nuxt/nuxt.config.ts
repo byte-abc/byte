@@ -1,15 +1,5 @@
-export default {
-  /**
-   * Add extend the plugin options under the `chakra` key.
-   **/
-  chakra: {
-    extendTheme: {
-      colors: {
-        brand: {
-          //
-          /* ... */
-        },
-      },
-    },
-  },
-}
+import {defineNuxtConfig} from 'nuxt/config'
+export default defineNuxtConfig({
+  modules: ['nuxt-quasar-ui'],
+  // quasar: {},
+})
