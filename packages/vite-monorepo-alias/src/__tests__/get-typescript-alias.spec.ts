@@ -10,28 +10,37 @@ describe('get-typescript-alias', () => {
     vi.mocked(parseWorkspacePath).mockRestore()
   })
   const setup = () => {
-    vi.mocked(parseWorkspacePath).mockImplementation((_, path) => path)
+    vi.mocked(parseWorkspacePath).mockImplementation((_, path) => path as any)
 
     return {}
   }
   it('should get typescript alias', async () => {
     setup()
-    const alias = await getTypescriptAlias([
-      join(__dirname, 'packages/*'),
-      join(__dirname, 'apps/*'),
-    ])
+    const alias = await getTypescriptAlias(
+      [join(__dirname, 'packages/*'), join(__dirname, 'apps/*')],
+      {'@/*': ['src/*']},
+    )
 
     expect(alias).toEqual([
       {
-        alias: [['src/*', 'src/']],
+        alias: [
+          ['@/*', 'src/'],
+          ['src/*', 'src/'],
+        ],
         path: join(__dirname, 'apps', 'john'),
       },
       {
-        alias: [['components/*', 'components/']],
+        alias: [
+          ['@/*', 'src/'],
+          ['components/*', 'components/'],
+        ],
         path: join(__dirname, 'packages', 'foo'),
       },
       {
-        alias: [['components/*', 'components/']],
+        alias: [
+          ['@/*', 'src/'],
+          ['components/*', 'components/'],
+        ],
         path: join(__dirname, 'packages', 'bar'),
       },
     ])

@@ -1,6 +1,8 @@
 import {join} from 'node:path'
+import {Paths} from './types'
 
 export interface CreateWorkspaceInfoOptions {
+  defaultPaths?: Paths
   root?: string
   workspaces: string[]
 }

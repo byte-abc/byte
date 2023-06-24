@@ -10,5 +10,5 @@ export const createWorkspaceInfo = (
 ): Promise<WorkspaceInfo[]> => {
   const normalizedOptions = normalizeWorkspaceInfoOptions(options)
 
-  return getTypescriptAlias(normalizedOptions.workspaces)
+  return getTypescriptAlias(normalizedOptions.workspaces, options.defaultPaths)
 }
