@@ -1,31 +1,10 @@
 {
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "allowJs": true,
-    "jsx": "preserve",
-    "target": "ESNext",
-    "module": "ESNext",
-    "outDir": "dist",
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "Node",
     "baseUrl": ".",
-    "paths": {
-      "src/*": ["src/*"]
-    }
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "target": "ES2015",
-      "module": "CommonJS"
-    }
-  },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.vue",
-    "src/**/*.tsx",
-    "components.d.ts",
-    "vite.config.ts",
-    "vite.web.config.ts",
-    "vite.webos.config.ts"
-  ]
+    "target": "esnext",
+    "module": "commonjs",
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+  }
 }
