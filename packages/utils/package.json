@@ -1,6 +1,13 @@
 {
   "name": "@byte-abc/utils",
   "version": "1.0.0",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./*": "./*"
+  },
   "scripts": {
     "build": "cross-env NODE_ENV=production vite build",
     "dev": "cross-env NODE_ENV=dev vite build --watch",

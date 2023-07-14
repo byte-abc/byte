@@ -1,8 +1,22 @@
 {
   "name": "@byte-abc/use",
   "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
   "dependencies": {
     "vue": "3.3.4"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./*": "./*"
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production vite build",

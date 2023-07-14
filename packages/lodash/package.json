@@ -4,6 +4,20 @@
   "dependencies": {
     "vue": "3.3.4"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./*": "./*"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "build": "cross-env NODE_ENV=production vite build && pnpm run copytype",
     "copytype": "cpy \"node_modules/@types/lodash/**/*.ts\" dist ",
