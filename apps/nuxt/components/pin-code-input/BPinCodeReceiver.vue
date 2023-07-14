@@ -22,7 +22,7 @@
     emit('input', value)
   }
 </script>
-<style>
+<style scoped>
   .box {
     overflow: hidden;
   }

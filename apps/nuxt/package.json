@@ -27,6 +27,7 @@
   },
   "web-types": [
     "../../node_modules/quasar/dist/web-types/web-types.json",
-    "./web-types.json"
+    "./web-types.json",
+    "../../web-types.json"
   ]
 }
