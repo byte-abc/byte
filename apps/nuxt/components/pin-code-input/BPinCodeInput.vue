@@ -1,6 +1,13 @@
 <template>
   <div class="pin-code-input">
-    <b-pin-code-box v-for="item in count" :key="item" />
+    <b-pin-code-box
+      v-for="(item, index) in count"
+      :key="item"
+      :value="valueStringRef[index]"
+      :type="type"
+      :focused="focused && index === lengthRef"
+    />
+    <b-pin-code-receiver @input="onInput" @remove="onRemove" @enter="onEnter" />
   </div>
 </template>
 
