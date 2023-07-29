@@ -1,11 +1,11 @@
 {
-  "name": "@byte-abc/back",
+  "name": "@byte-abc/key-stone",
   "version": "1.0.0",
   "scripts": {
     "dev": "keystone dev",
     "start": "keystone start",
     "build": "keystone build",
-    "prepare": "keystone build --no-ui --frozen"
+    "_prepare": "keystone build --no-ui --frozen"
   },
   "dependencies": {
     "module-alias": "^2.2.3",

@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-  import BPinCodeInput from 'components/pin-code-input/BPinCodeInput.vue'
+  import BPinCodeInput from '~/components/pin-code-input/BPinCodeInput.vue'
   import {ref} from 'vue'
 
   const props = defineProps({})

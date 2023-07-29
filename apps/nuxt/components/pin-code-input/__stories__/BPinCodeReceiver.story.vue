@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
   import {PropType, ref} from 'vue'
-  import BPinCodeReceiver from 'components/pin-code-input/BPinCodeReceiver.vue'
+  import BPinCodeReceiver from '~/components/pin-code-input/BPinCodeReceiver.vue'
 
   const props = defineProps({})
   const emit = defineEmits([])

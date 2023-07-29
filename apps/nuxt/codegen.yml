@@ -1,0 +1,15 @@
+schema: ./server/schema.graphql
+documents:
+  - "./queries/**/*.graphql"
+  - "./queries/**/*.gql"
+generates:
+  ./queries/codegen.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node
+      - add:
+          content:
+            - "/* eslint-disable */"
+            - "/* istanbul ignore file */"
+            - "// noinspection JSUnusedGlobalSymbols ,JSUnnecessarySemicolon \n"
