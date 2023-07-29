@@ -34,4 +34,20 @@ describe('alias', () => {
       )
     }
   })
+  it('should create vite alias ~', () => {
+    const info: WorkspaceInfo[] = [
+      {
+        alias: [[/^~/u, '']],
+        path: /^\/foo\/bar/u,
+      },
+    ]
+    const alias = createAlias(info)
+    expect(alias.customResolver).toBeInstanceOf(Function)
+    if (typeof alias.customResolver === 'function') {
+      const customResolver: any = alias.customResolver
+      expect(customResolver('~/components/Foo.vue', '/foo/bar/john/Bar.vue')).toBe(
+        '/foo/bar/components/Foo.vue',
+      )
+    }
+  })
 })
