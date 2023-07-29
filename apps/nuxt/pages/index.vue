@@ -2,13 +2,7 @@
   <q-page>
     index page
     <q-btn color="primary" label="Primary" />
-    <div class="container">
-      <b-pin-code-receiver
-        style="width: 100px; height: 100px; background-color: red"
-        :filter-fn="isNumber"
-        @input="onInput"
-      />
-    </div>
+    <div class="container text-red-700">container</div>
   </q-page>
 </template>
 

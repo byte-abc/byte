@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-  import {computed, PropType} from 'vue'
+  import {computed} from 'vue'
 
   const props = defineProps({
     focused: {type: Boolean},
@@ -41,14 +41,19 @@
     align-items: center;
     justify-content: center;
   }
+  .input-box:not:last-child {
+    margin-right: 1rem;
+  }
   .input-box.selected,
   .input-box.focused {
     border-color: #eee;
   }
+
   .input-box.filled {
     border-color: #eee;
     background-color: #eee;
   }
+
   .dot {
     overflow: hidden;
     position: absolute;
@@ -61,10 +66,12 @@
     background-color: #252525;
     color: transparent;
   }
+
   .input-text {
     font-size: 24px;
     text-align: center;
   }
+
   .blind {
     position: absolute;
     overflow: hidden;
