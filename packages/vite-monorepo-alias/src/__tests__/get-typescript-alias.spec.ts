@@ -25,9 +25,20 @@ describe('get-typescript-alias', () => {
       {
         alias: [
           ['@/*', 'src/'],
+          ['foo/*', 'foo/'],
           ['src/*', 'src/'],
         ],
         path: join(__dirname, 'apps', 'john'),
+      },
+      {
+        alias: [
+          ['@/*', 'src/'],
+          ['foo/*', 'foo/'],
+          ['bar/*', 'bar/'],
+          ['~/*', '/'],
+          ['~', ''],
+        ],
+        path: join(__dirname, 'apps', 'baz'),
       },
       {
         alias: [

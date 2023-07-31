@@ -1,16 +1,18 @@
 <template>
   <div class="box">
-    <input class="input" @input="onInput" />
+    <input class="input" @input="onInput" @keyup="onKeyup" />
   </div>
 </template>
 
 <script setup lang="ts">
-  import {PropType} from 'vue'
-
   const props = defineProps({
     filterFn: {type: Function},
   })
-  const emit = defineEmits(['input'])
+  const emit = defineEmits({
+    enter: () => true,
+    input: (value: string) => value || true,
+    remove: () => true,
+  })
 
   const onInput = (event: Event & {target: {value: string}}) => {
     const [value] = event.target.value
@@ -20,6 +22,17 @@
       return
     }
     emit('input', value)
+  }
+
+  const onKeyup = (event) => {
+    const keyName = event.key ?? event.code
+    if (keyName === 'Backspace') {
+      emit('remove')
+      return
+    }
+    if (keyName === 'Enter') {
+      emit('enter')
+    }
   }
 </script>
 <style scoped>

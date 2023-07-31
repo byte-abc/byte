@@ -6,18 +6,28 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "prepare": "nuxt prepare"
+    "prepare": "nuxt prepare",
+    "generator:graphql": "graphql-codegen"
   },
   "dependencies": {
+    "nexus-prisma": "^1.0.17",
+    "@prisma/client": "^4.16.1",
     "@apollo/server": "^4.7.5",
     "graphql": "^16.7.1",
     "@as-integrations/h3": "^1.1.5",
     "@byte-abc/lodash": "workspace:*",
     "@vueuse/core": "^9.13.0",
-    "@quasar/extras": "^1.16.4"
+    "@quasar/extras": "^1.16.4",
+    "nexus": "^1.3.0"
   },
   "devDependencies": {
-    "nuxt-graphql-client": "^0.2.27",
+    "prisma": "^4.16.2",
+    "@graphql-codegen/add": "^5.0.0",
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@graphql-codegen/client-preset": "^4.1.0",
+    "@nuxtjs/apollo": "^5.0.0-alpha.6",
     "nuxt-quasar-ui": "^2.0.2",
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.7.2",

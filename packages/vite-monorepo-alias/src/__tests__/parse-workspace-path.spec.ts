@@ -17,4 +17,11 @@ describe('parse-workspace-path', () => {
     expect(regexp.test('store/hello')).toBeFalsy()
     expect(regexp.test('foo/components/hello')).toBeFalsy()
   })
+  it('should return ~', () => {
+    const regexp = parseWorkspacePath('', '~')
+
+    expect('~/components/hello'.replace(regexp, '')).toBe('components/hello')
+    expect(regexp.test('store/hello')).toBeFalsy()
+    expect(regexp.test('foo/components/hello')).toBeFalsy()
+  })
 })

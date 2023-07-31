@@ -1,0 +1,2 @@
+schema: ./.nuxt/schema.graphql
+documents: 'server/**/*.graphql'

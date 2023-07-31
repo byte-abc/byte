@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "./extends-tsconfig.json",
+    "./extends-tsconfig2.json"
+  ],
+  "compilerOptions": {
+    "paths": {
+      "~/*": ["./*"],
+      "~": ["."]
+    }
+  }
+}
