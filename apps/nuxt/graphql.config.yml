@@ -1,2 +1,2 @@
-schema: ./server/schema.graphql
+schema: ./.nuxt/schema.graphql
 documents: 'server/**/*.graphql'

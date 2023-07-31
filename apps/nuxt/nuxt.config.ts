@@ -13,12 +13,5 @@ export default defineNuxtConfig({
       },
     ],
     '@nuxtjs/tailwindcss',
-    [
-      'nuxt-graphql-server',
-      {
-        schema: './server/**/*.graphql',
-        url: '/api/graphql',
-      },
-    ],
   ],
 })

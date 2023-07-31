@@ -1,16 +1,29 @@
-import {Resolvers} from '#graphql/resolver'
-import {schema} from '#graphql/schema'
-import {hello} from '../resolvers/hello'
 import {ApolloServer} from '@apollo/server'
 import {startServerAndCreateH3Handler} from '@as-integrations/h3'
+import {makeSchema, queryType, stringArg} from 'nexus'
+import {dirname, resolve} from 'node:path'
+import {fileURLToPath} from 'node:url'
 
-const resolvers: Resolvers = {
-  Query: {
-    hello,
+const Query = queryType({
+  definition(t) {
+    t.string('hello', {
+      args: {name: stringArg()},
+      resolve: (parent, {name}) => `Hello ${name || 'World'}!`,
+    })
   },
-}
+})
 
-const apollo = new ApolloServer({resolvers, typeDefs: schema})
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
+const schema = makeSchema({
+  outputs: {
+    schema: resolve(__dirname, '../schema.graphql'),
+    typegen: resolve(__dirname, '../typings.ts'),
+  },
+  types: [Query],
+})
+
+const apollo = new ApolloServer({schema})
 
 export default startServerAndCreateH3Handler(apollo, {
   // Optional: Specify context

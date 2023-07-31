@@ -10,16 +10,18 @@
     "generator:graphql": "graphql-codegen"
   },
   "dependencies": {
+    "nexus-prisma": "^1.0.17",
+    "@prisma/client": "^4.16.1",
     "@apollo/server": "^4.7.5",
     "graphql": "^16.7.1",
     "@as-integrations/h3": "^1.1.5",
     "@byte-abc/lodash": "workspace:*",
     "@vueuse/core": "^9.13.0",
     "@quasar/extras": "^1.16.4",
-    "nuxt-graphql-server": "^2.0.1",
     "nexus": "^1.3.0"
   },
   "devDependencies": {
+    "prisma": "^4.16.2",
     "@graphql-codegen/add": "^5.0.0",
     "@graphql-codegen/cli": "^5.0.0",
     "@graphql-codegen/typescript": "^4.0.1",

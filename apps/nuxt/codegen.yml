@@ -1,4 +1,4 @@
-schema: ./server/schema.graphql
+schema: ./.nuxt/schema.graphql
 documents:
   - "./queries/**/*.graphql"
   - "./queries/**/*.gql"
