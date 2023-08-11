@@ -7,7 +7,10 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "prepare": "nuxt prepare",
-    "generator:graphql": "graphql-codegen",
+    "graphql:generate": "graphql-codegen",
+    "prisma:generate": "prisma generate --schema=./server/schema.prisma",
+    "prisma:init": "prisma init --schema=./server/schema.prisma",
+    "prisma:migrate:dev": "prisma migrate dev --schema=./server/schema.prisma",
     "docker:up": "docker-compose -f local-compose.yml up -d"
   },
   "dependencies": {

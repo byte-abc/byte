@@ -8,7 +8,7 @@ generator client {
 }
 
 generator nexusPrisma {
-   provider = "nexus-prisma"
+  provider = "nexus-prisma"
 }
 
 /// This is a user!

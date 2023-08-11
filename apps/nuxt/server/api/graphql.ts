@@ -1,17 +1,9 @@
 import {ApolloServer} from '@apollo/server'
 import {startServerAndCreateH3Handler} from '@as-integrations/h3'
-import {makeSchema, queryType, stringArg} from 'nexus'
+import {makeSchema} from 'nexus'
 import {dirname, resolve} from 'node:path'
 import {fileURLToPath} from 'node:url'
-
-const Query = queryType({
-  definition(t) {
-    t.string('hello', {
-      args: {name: stringArg()},
-      resolve: (parent, {name}) => `Hello ${name || 'World'}!`,
-    })
-  },
-})
+import * as resolvers from '../resolvers'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -20,7 +12,7 @@ const schema = makeSchema({
     schema: resolve(__dirname, '../schema.graphql'),
     typegen: resolve(__dirname, '../typings.ts'),
   },
-  types: [Query],
+  types: resolvers,
 })
 
 const apollo = new ApolloServer({schema})

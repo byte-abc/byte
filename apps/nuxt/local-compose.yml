@@ -9,4 +9,4 @@ services:
       POSTGRES_USER: "user"
       POSTGRES_PASSWORD: "pa22w0rd"
     volumes:
-      - ./.db_data/:/var/lib/postgresql/data
+      - ./.db-data/:/var/lib/postgresql/data
