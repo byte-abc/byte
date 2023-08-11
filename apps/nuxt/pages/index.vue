@@ -11,16 +11,9 @@
 <script setup lang="ts">
   import {ref} from 'vue'
   import BPinCodeInput from '~/components/pin-code-input/BPinCodeInput.vue'
-  import {isNumber} from './is-number'
   import {GetHelloDocument} from '~/queries/codegen'
-  import {isNil} from '@byte-abc/lodash'
 
-  const props = defineProps({})
-  const emit = defineEmits({})
   const valueRef = ref()
-  const onInput = (value: string) => {
-    // console.log(value, isNil(null))
-  }
 
   const {data} = await useAsyncQuery(GetHelloDocument)
 </script>
