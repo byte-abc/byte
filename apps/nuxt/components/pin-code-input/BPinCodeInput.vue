@@ -7,7 +7,12 @@
       :type="type"
       :focused="focused && index === lengthRef"
     />
-    <b-pin-code-receiver @input="onInput" @remove="onRemove" @enter="onEnter" />
+    <b-pin-code-receiver
+      class="pin-code-receiver"
+      @input="onInput"
+      @remove="onRemove"
+      @enter="onEnter"
+    />
   </div>
 </template>
 
@@ -42,7 +47,16 @@
 
 <style>
   .pin-code-input {
-    background-color: red;
-    display: flex;
+    background-color: black;
+    overflow: hidden;
+    display: inline-flex;
+    position: relative;
+  }
+  .pin-code-receiver {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 </style>

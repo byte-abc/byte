@@ -7,7 +7,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "prepare": "nuxt prepare",
-    "generator:graphql": "graphql-codegen"
+    "generator:graphql": "graphql-codegen",
+    "docker:up": "docker-compose -f local-compose.yml up -d"
   },
   "dependencies": {
     "nexus-prisma": "^1.0.17",
@@ -18,6 +19,7 @@
     "@byte-abc/lodash": "workspace:*",
     "@vueuse/core": "^9.13.0",
     "@quasar/extras": "^1.16.4",
+    "@byte-abc/use": "workspace:*",
     "nexus": "^1.3.0"
   },
   "devDependencies": {
