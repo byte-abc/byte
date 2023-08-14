@@ -1,1 +1,1 @@
-export * from './hello'
+export {HelloResolver} from './HelloResolver'

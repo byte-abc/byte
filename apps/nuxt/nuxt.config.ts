@@ -14,4 +14,16 @@ export default defineNuxtConfig({
     ],
     '@nuxtjs/tailwindcss',
   ],
+  nitro: {
+    esbuild: {
+      options: {
+        target: 'esnext',
+      },
+    },
+    hooks: {
+      'rollup:before': (context) => {
+        context.options.moduleSideEffects.push('reflect-metadata')
+      },
+    },
+  },
 })

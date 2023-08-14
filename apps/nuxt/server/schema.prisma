@@ -7,13 +7,26 @@ generator client {
   provider = "prisma-client-js"
 }
 
-generator nexusPrisma {
-  provider = "nexus-prisma"
+generator typegraphql {
+  provider = "typegraphql-prisma"
 }
 
-/// This is a user!
+/// user certification only
 model User {
-  /// This is an id!
-  id  String  @id
+  id  Int  @id @default(autoincrement())
+  /// emial or auth id from 3th party service
+  identifier String @unique
+  /// auth identifier provider null is email / password
+  /// - email / password : email
+  inentifierProvider String?
+  password String?
+  profile UserProfile?
 }
 
+/// user bio information
+model UserProfile {
+  id  Int  @id @default(autoincrement())
+  name String?
+  owner User @relation(fields: [ownerId], references: [id])
+  ownerId Int @unique
+}
