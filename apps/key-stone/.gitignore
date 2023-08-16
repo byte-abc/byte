@@ -1,7 +1,0 @@
-node_modules
-.keystone
-keystone.db
-*.log
-
-schema.prisma
-schema.graphql

@@ -23,3 +23,6 @@ logs
 
 # graphql codegen
 /queries/codegen.ts
+
+# docker db volumes
+.db-data

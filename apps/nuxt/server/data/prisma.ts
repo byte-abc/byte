@@ -1,4 +1,3 @@
-// import {PrismaClient} from '@prisma/client'
+import {PrismaClient} from '@prisma/client'
 
-// todo export real prisma
-export const prisma = null
+export const prisma = new PrismaClient()

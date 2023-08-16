@@ -1,0 +1,1 @@
+export {HelloResolver} from './HelloResolver'
