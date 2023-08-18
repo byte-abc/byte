@@ -58,4 +58,7 @@
     background-color: transparent;
     outline: 0;
   }
+  .box > .input:disabled {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 </style>
