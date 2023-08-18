@@ -20,7 +20,6 @@
       type: String,
     },
   })
-  const emit = defineEmits([])
   const isFilled = computed(() => {
     return Boolean(props.value)
   })
@@ -41,7 +40,6 @@
   .input-box:not:last-child {
     margin-right: 1rem;
   }
-  .input-box.selected,
   .input-box.focused {
     border-color: #eee;
   }
