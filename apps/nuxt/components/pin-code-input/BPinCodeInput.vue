@@ -30,6 +30,7 @@
     disabled: {default: false, type: Boolean},
     focused: {type: Boolean},
     modelValue: null,
+    password: {type: Boolean},
     type: {type: String},
   })
   const emit = defineEmits(['update:model-value', 'enter', 'focus'])

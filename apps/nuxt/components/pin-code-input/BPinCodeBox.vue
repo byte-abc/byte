@@ -1,6 +1,6 @@
 <template>
   <div class="input-box" :class="{hover, focused, filled: isFilled}">
-    <span v-if="isPasswordRef && isFilled" class="dot">
+    <span v-if="password && isFilled" class="dot">
       <em class="blind">*</em>
     </span>
     <span v-else class="input-text">{{ value }}</span>
@@ -13,17 +13,14 @@
   const props = defineProps({
     focused: {type: Boolean},
     hover: {type: Boolean},
-    type: {type: String},
+    password: {
+      type: Boolean,
+    },
     value: {
       type: String,
     },
   })
   const emit = defineEmits([])
-
-  const isPasswordRef = computed(() => {
-    return props.type === 'password'
-  })
-
   const isFilled = computed(() => {
     return Boolean(props.value)
   })
