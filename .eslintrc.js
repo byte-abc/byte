@@ -696,7 +696,7 @@ module.exports = {
     ],
     'vue/static-class-names-order': 'warn',
     'vue/v-for-delimiter-style': 'error',
-    'vue/v-on-handler-style': 'warn',
+    'vue/v-on-handler-style': 'off',
     'wrap-iife': 'error',
     'yield-star-spacing': ['error', 'before'],
     yoda: 'error',

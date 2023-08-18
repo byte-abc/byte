@@ -18,7 +18,7 @@ model User {
   identifier String @unique
   /// auth identifier provider null is email / password
   /// - email / password : email
-  inentifierProvider String?
+  identifierProvider String?
   password String?
   profile UserProfile?
 }

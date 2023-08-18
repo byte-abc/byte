@@ -1,11 +1,19 @@
 <template>
   <div class="box">
-    <input class="input" @input="onInput" @keyup="onKeyup" />
+    <input
+      class="input"
+      :disabled="disabled"
+      @input="onInput"
+      @keyup="onKeyup"
+      @focus="onFocus(true)"
+      @blur="onFocus(false)"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
   const props = defineProps({
+    disabled: {default: false, type: Boolean},
     filterFn: {type: Function},
   })
   const emit = defineEmits({

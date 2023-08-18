@@ -7,7 +7,7 @@ const schema = await createSchema()
 
 export default startServerAndCreateH3Handler(new ApolloServer({schema}), {
   // Optional: Specify context
-  context: ({event: {context}}) => {
-    return Promise.resolve({params: context.params, sessions: context.sessions})
+  context: ({event: {context, node}}) => {
+    return Promise.resolve({params: context.params, sessions: context.sessions, req: node.req, res: node.res})
   },
 })

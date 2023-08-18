@@ -20,14 +20,18 @@
   import {computed} from 'vue'
   import BPinCodeBox from './BPinCodeBox.vue'
   import BPinCodeReceiver from './BPinCodeReceiver.vue'
+  import {mutRef} from '@byte-abc/use'
 
   const props = defineProps({
     count: {default: 4, type: Number},
+    disabled: {default: false, type: Boolean},
     focused: {type: Boolean},
     modelValue: null,
     type: {type: String},
   })
-  const emit = defineEmits(['update:model-value', 'enter'])
+  const emit = defineEmits(['update:model-value', 'enter', 'focus'])
+
+  const focusedRef = mutRef(computed(() => props.focused))
 
   const valueStringRef = computed(() => String(props.modelValue ?? ''))
   const lengthRef = computed(() => valueStringRef.value.length)
