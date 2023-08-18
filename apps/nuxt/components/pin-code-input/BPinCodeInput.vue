@@ -5,13 +5,16 @@
       :key="item"
       :value="valueStringRef[index]"
       :type="type"
-      :focused="focused && index === lengthRef"
+      :focused="focusedRef && index === lengthRef"
+      :password="password"
     />
     <b-pin-code-receiver
       class="pin-code-receiver"
+      :disabled="disabled"
       @input="onInput"
       @remove="onRemove"
       @enter="onEnter"
+      @focus="onFocus"
     />
   </div>
 </template>
@@ -46,6 +49,11 @@
 
   const onEnter = () => {
     emit('enter')
+  }
+
+  const onFocus = (value: boolean) => {
+    focusedRef.value = value
+    emit('focus', focusedRef.value)
   }
 </script>
 

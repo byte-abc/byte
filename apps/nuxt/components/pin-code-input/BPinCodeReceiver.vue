@@ -18,6 +18,7 @@
   })
   const emit = defineEmits({
     enter: () => true,
+    focus: (value: boolean) => value || true,
     input: (value: string) => value || true,
     remove: () => true,
   })
@@ -42,6 +43,8 @@
       emit('enter')
     }
   }
+
+  const onFocus = (value: boolean) => emit('focus', value)
 </script>
 <style scoped>
   .box {
