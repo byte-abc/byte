@@ -22,6 +22,7 @@
     "graphql-fields": "^2.0.3",
     "@as-integrations/h3": "^1.1.5",
     "@byte-abc/lodash": "workspace:*",
+    "class-variance-authority": "^0.7.0",
     "@vueuse/core": "^9.13.0",
     "@quasar/extras": "^1.16.4",
     "@byte-abc/use": "workspace:*",
