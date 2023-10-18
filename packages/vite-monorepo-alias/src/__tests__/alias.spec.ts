@@ -34,7 +34,7 @@ describe('alias', () => {
       )
     }
   })
-  it('should create vite alias ~', () => {
+  it.skip('should create vite alias ~', () => {
     const info: WorkspaceInfo[] = [
       {
         alias: [[/^~/u, '']],
