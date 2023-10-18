@@ -21,6 +21,7 @@
     "graphql-scalars": "^1.22.2",
     "graphql-fields": "^2.0.3",
     "@as-integrations/h3": "^1.1.5",
+    "@byte-abc/utils": "workspace:*",
     "@byte-abc/lodash": "workspace:*",
     "class-variance-authority": "^0.7.0",
     "@vueuse/core": "^9.13.0",

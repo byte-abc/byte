@@ -4,5 +4,6 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "lib": ["WebWorker", "ESNext"]
   }
 }
