@@ -1,9 +1,5 @@
 <template>
-  <q-layout>
-    <q-page-container>
-      <nuxt-page />
-    </q-page-container>
-  </q-layout>
+  <nuxt-page />
 </template>
 <script lang="ts" setup>
   import {onMounted} from 'vue'

@@ -12,4 +12,6 @@ export default defineConfig({
   ],
   // outDir: 'hdist',
   plugins: [HstVue()],
+
+  setupFile: '/histoire.setup.ts',
 })

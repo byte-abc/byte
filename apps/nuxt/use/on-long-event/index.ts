@@ -1,5 +1,5 @@
-import {ref, watchEffect} from 'vue'
 import {MaybeRef, resolveRef} from '@byte-abc/use'
+import {watchEffect} from 'vue'
 
 export type LongEventKey = 'long-start' | 'long-end' | 'click'
 export type LongEventCallback = (event: LongEventKey) => unknown
