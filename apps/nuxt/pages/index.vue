@@ -5,6 +5,7 @@
     <span>{{ JSON.stringify(data) }}</span>
     <b-pin-code-input v-model="valueRef" />
     <b-modal></b-modal>
+    <b-component />
   </q-page>
 </template>
 
@@ -13,6 +14,7 @@
   import BPinCodeInput from '~/components/pin-code-input/BPinCodeInput.vue'
   import {GetHelloDocument} from '~/queries/codegen'
   import {BModal} from '@/components/modal'
+  import {BComponent} from '@/use/use-tests/Component'
 
   const valueRef = ref()
 
